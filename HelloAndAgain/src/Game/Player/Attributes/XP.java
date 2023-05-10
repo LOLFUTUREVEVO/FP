@@ -2,20 +2,25 @@ package Game.Player.Attributes;
 
 public class XP {
     // will always be 100 to start will increase by exponential
-    private int requiredToLevelUp = 100, currentXP, currentLVL = 1;
+    private int requiredToLevelUp = 100, currentXP, currentLVL = 1, skillPoints;
 
-
+    public XP() {
+        currentXP = 0;
+        skillPoints = 0;
+    }
     public void CheckLvl() {
         if(currentXP >= requiredToLevelUp) {
             currentLVL++;
             currentXP -= requiredToLevelUp;
             increaseRequired();
+            addSkillpoints();
             CheckLvl();
         }
     }
     public void increaseRequired() {
         requiredToLevelUp += requiredToLevelUp/2;
     }
+    public void addSkillpoints() { skillPoints += 3;}
     public void increaseXP(int i) {
         currentXP += i;
         CheckLvl();
