@@ -6,10 +6,12 @@ import Game.Player.Attributes.XP;
 import Game.Player.Attributes.Position;
 
 public class Player {
+    private boolean toggleStatBookGui;
     private Health healthBar;
     private XP lvlSystem;
     private Position charPos;
     private StatBook stats;
+
 
     public Player(int startX, int startY, int HealthMax) {
         healthBar = new Health(HealthMax, HealthMax);
@@ -18,6 +20,24 @@ public class Player {
         stats = new StatBook();
         lvlSystem.setCurrentXP(0);
     }
+
+    public StatBook getStats() {
+        return stats;
+    }
+
+    public void setStats(StatBook stats) {
+        this.stats = stats;
+    }
+
+    public boolean isToggleStatBookGui() {
+        return toggleStatBookGui;
+    }
+
+    public void setToggleStatBookGui(boolean toggleStatBookGui) {
+        this.toggleStatBookGui = toggleStatBookGui;
+    }
+
+
 
     public Health getHealthBar() {
         return healthBar;
