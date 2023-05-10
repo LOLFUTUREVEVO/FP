@@ -6,3 +6,8 @@ My AP CSA Final Project
 
 ## Description
 Its just a game lol
+
+
+## Controls
+
+Idk yet loser you need to wait bumskee kadumbskee

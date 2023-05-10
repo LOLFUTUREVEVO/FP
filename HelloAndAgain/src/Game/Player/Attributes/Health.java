@@ -8,14 +8,14 @@ public class Health {
         healthMax = maxVal;
     }
 
-    public void decreaseHealth(int i) {
+    public void takeDamage(int i) {
         healthval -= i;
         if(healthval < 0 ) {
             healthval = 0;
         }
     }
 
-    public void increaseHealth(int i) {
+    public void heal(int i) {
         healthval += i;
         if(healthval > healthMax ) {
             healthval = healthMax;
@@ -37,6 +37,4 @@ public class Health {
     public int getHealthMax() {
         return healthMax;
     }
-
-
 }
