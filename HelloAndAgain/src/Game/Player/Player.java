@@ -6,7 +6,7 @@ import Game.Player.Attributes.XP;
 import Game.Player.Attributes.Position;
 
 public class Player {
-    private boolean toggleStatBookGui;
+    private boolean enableLeveling;
     private Health healthBar;
     private XP lvlSystem;
     private Position charPos;
@@ -29,12 +29,12 @@ public class Player {
         this.stats = stats;
     }
 
-    public boolean isToggleStatBookGui() {
-        return toggleStatBookGui;
+    public boolean isEnableLeveling() {
+        return enableLeveling;
     }
 
-    public void setToggleStatBookGui(boolean toggleStatBookGui) {
-        this.toggleStatBookGui = toggleStatBookGui;
+    public void setEnableLeveling(boolean enableLeveling) {
+        this.enableLeveling = enableLeveling;
     }
 
 
