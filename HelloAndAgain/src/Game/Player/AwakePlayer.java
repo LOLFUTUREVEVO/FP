@@ -15,7 +15,7 @@ public class AwakePlayer extends Player {
         super(startX, startY, HealthMax);
         this.setEnableLeveling(true);
         image = new PImage();
-        image = PImage.loadTGA()
+
     }
 
 
