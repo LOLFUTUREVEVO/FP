@@ -1,5 +1,6 @@
 package Game.Player;
 
+import Game.Entity;
 import Game.Player.Attributes.Health;
 import Game.Player.Attributes.StatBook;
 import Game.Player.Attributes.XP;
@@ -62,6 +63,7 @@ public class Player {
     public void setCharPos(Position charPos) {
         this.charPos = charPos;
     }
+
 
 
 }

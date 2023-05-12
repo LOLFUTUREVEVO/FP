@@ -6,16 +6,22 @@ import processing.core.PImage;
 
 import java.awt.*;
 
+import static processing.awt.ShimAWT.loadImage;
+
 public class AwakePlayer extends Player {
     PImage image;
 
 
     // This wont have anything additional besides certain objective
-    public AwakePlayer(int startX, int startY, int HealthMax) {
+    public AwakePlayer(int startX, int startY, int HealthMax, PApplet main, PImage img) {
         super(startX, startY, HealthMax);
         this.setEnableLeveling(true);
         image = new PImage();
+        image = img;
 
+    }
+    public void displayPlayer(PApplet main) {
+        main.image(image, super.getCharPos().getX(), super.getCharPos().getY());
     }
 
 
