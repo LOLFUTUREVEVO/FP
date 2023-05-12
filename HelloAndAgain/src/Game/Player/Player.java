@@ -17,7 +17,7 @@ public class Player {
     public Player(int startX, int startY, int HealthMax) {
         healthBar = new Health(HealthMax, HealthMax);
         lvlSystem = new XP();
-        charPos = new Position(startX, startY);
+        charPos = new Position(startX, startY, 5, 5);
         stats = new StatBook();
         lvlSystem.setCurrentXP(0);
     }

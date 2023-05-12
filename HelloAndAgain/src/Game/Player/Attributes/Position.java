@@ -3,16 +3,19 @@ package Game.Player.Attributes;
 public class Position {
     private int x,y;
     private int xVel,yVel;
-
-    public Position(int startX, int startY){
+    private int maxXVel, maxyVel;
+    public Position(int startX, int startY, int mxv, int myv){
         x = startX;
         y = startY;
         xVel = 0;
         yVel = 0;
+        maxXVel = mxv;
+        maxyVel = myv;
     }
 
     public void UpdatePosition() {
-
+        x += xVel;
+        y += yVel;
     }
 
 
@@ -23,6 +26,14 @@ public class Position {
         yVel += a;
     }
 
+    public void checkMax() {
+        if(xVel > maxXVel) {
+            xVel = maxXVel;
+        }
+        if(yVel > maxyVel) {
+            yVel = maxyVel;
+        }
+    }
 
     public int getX() {
         return x;

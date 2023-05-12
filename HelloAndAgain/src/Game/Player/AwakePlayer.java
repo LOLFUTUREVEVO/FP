@@ -18,7 +18,7 @@ public class AwakePlayer extends Player {
         this.setEnableLeveling(true);
         image = new PImage();
         image = img;
-
+        img.resize(128,128);
     }
     public void displayPlayer(PApplet main) {
         main.image(image, super.getCharPos().getX(), super.getCharPos().getY());
