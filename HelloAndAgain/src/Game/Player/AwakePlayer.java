@@ -27,6 +27,7 @@ public class AwakePlayer extends Player {
     public void displayPlayer(PApplet main) {
 
         main.image(IdleAnim[lol], super.getCharPos().getX(), super.getCharPos().getY());
+
     }
     public void AnimatorAwake() {
         if(lol == 0) {
