@@ -32,19 +32,16 @@ public class Main extends PApplet {
         plrA = new AwakePlayer(width/2 - 32, height/2 - 32 , 100, this, loadImage("Game/Assets/Character/Idle/CharFrameOneIdle.png", "png") , loadImage("Game/Assets/Character/Idle/CharFrameTwoIdle.png", "png"));
         crosshair = loadImage("Game/Assets/Crosshair.png");
 
+
     }
 
 
     public void draw() {
         noCursor();
         background(0);
-
         plrA.displayPlayer(this);
 
-        if(frameC > 20) {
-            plrA.AnimatorAwake();
-            frameC = 0;
-        }
+
 
         plrA.getCharPos().checkMax();
         image(crosshair, mouseX - 42,mouseY - 42);
