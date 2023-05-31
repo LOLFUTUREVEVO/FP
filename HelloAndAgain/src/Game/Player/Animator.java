@@ -10,15 +10,15 @@ public class Animator {
     PImage[] animationTrack;
     PImage CurrentFrame;
     int currentFrameVal = 0;
-    int counter;
+    int counter, beforeNext;
 
 
-    public Animator(int animLength, PApplet main, String PathName) {
+    public Animator(int animLength, PApplet main, String PathName, int BeforeNext) {
         animationTrack = new PImage[animLength];
         CurrentFrame = animationTrack[0];
 
         File path = new File(PathName);
-
+        beforeNext = BeforeNext;
         File [] files = path.listFiles();
         for (int i = 0; i < files.length; i++){
             if (files[i].isFile()){ //this line weeds out other directories/folders
@@ -29,7 +29,7 @@ public class Animator {
 
     }
     public void nextFrame() {
-        if(counter > 10) {
+        if(counter > beforeNext) {
             if( currentFrameVal >= animationTrack.length - 1) {
                 currentFrameVal = 0;
             } else {

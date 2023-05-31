@@ -38,7 +38,7 @@ public class Main extends PApplet {
 
     public void draw() {
         noCursor();
-        background(0);
+        background(255);
         plrA.displayPlayer(this);
 
 

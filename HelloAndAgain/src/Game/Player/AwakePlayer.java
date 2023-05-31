@@ -10,24 +10,27 @@ public class AwakePlayer extends Player {
     private int lol = 0;
     PImage[] IdleAnim = new PImage[2];
     PImage[] WalkingAnim = new PImage[5];
-    public Animator bruh;
+    public Animator IdleAnimator;
+    public Animator WalkingAnimator;
 
     // This wont have anything additional besides certain objective
     public AwakePlayer(int startX, int startY, int HealthMax, PApplet main, PImage img, PImage f2) {
         super(startX, startY, HealthMax);
         this.setEnableLeveling(true);
+        String Idle = System.getProperty("user.dir");
+        Idle += "\\HelloAndAgain\\src\\Game\\Assets\\Character\\Idle\\Unused";
+        String Walking = System.getProperty("user.dir");
+        Walking += "\\HelloAndAgain\\src\\Game\\Assets\\Character\\Walking";
+        IdleAnimator = new Animator(5, main, Idle,10);
+        IdleAnimator.updateFrame();
+        WalkingAnimator = new Animator(9, main, Walking,3);
+        WalkingAnimator.updateFrame();
 
-        frame1 = img;
-        frame2 = f2;
-        bruh = new Animator(5, main, "C:\\Users\\KarolKopciuch\\OneDrive - NYCDOE\\Desktop\\Pixlab\\FinalProject\\HelloAndAgain\\src\\Game\\Assets\\Character\\Idle\\Unused");
-        bruh.updateFrame();
-        IdleAnim[0] = frame1;
-        IdleAnim[1] = f2;
     }
     public void displayPlayer(PApplet main) {
-        main.image(bruh.getCurrentFrame(), super.getCharPos().getX(), super.getCharPos().getY());
-        bruh.nextFrame();
-        bruh.updateFrame();
+        main.image(WalkingAnimator.getCurrentFrame(), super.getCharPos().getX(), super.getCharPos().getY());
+        WalkingAnimator.nextFrame();
+        WalkingAnimator.updateFrame();
 
 
     }
