@@ -58,7 +58,10 @@ public class Main extends PApplet {
     }
 
     public void keyReleased() {
+        switch(key) {
+            case 'w':
 
+        }
     }
 
 

@@ -9,14 +9,14 @@ public class Controls extends PApplet {
     /*
 
         Controls:
-        0 - w
-        1 - a
-        2 - s
-        3 - d
-        4 - q
-        5 - e
-        6 - r
-        7 - f
+        0 - w - Up
+        1 - a - Left
+        2 - s - Down
+        3 - d - Right
+        4 - q - Ability 1
+        5 - e - Ability 2
+        6 - r - Ability 3
+        7 - f - Ultimate
 
      */
 
