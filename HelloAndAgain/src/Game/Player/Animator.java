@@ -38,7 +38,7 @@ public class Animator {
             counter = 0;
         }
         counter++;
-        System.out.println("Next Frame: " + currentFrameVal);
+        //System.out.println("Next Frame: " + currentFrameVal);
     }
     //C:\Users\KarolKopciuch\OneDrive - NYCDOE\Desktop\Pixlab\FinalProject\HelloAndAgain\src\Game\Assets\Character\Idle\Unused\pixil-frame-0.png
     //Game/Assets/Character/Idle/Unused/

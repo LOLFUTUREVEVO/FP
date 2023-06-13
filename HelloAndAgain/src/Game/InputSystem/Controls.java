@@ -13,15 +13,12 @@ public class Controls extends PApplet {
         1 - a - Left
         2 - s - Down
         3 - d - Right
-        4 - q - Ability 1
-        5 - e - Ability 2
-        6 - r - Ability 3
-        7 - f - Ultimate
+
 
      */
 
 
-    boolean[] controls = new boolean[8];
+    boolean[] controls = new boolean[4];
 
 
     public Controls() {
@@ -30,7 +27,24 @@ public class Controls extends PApplet {
 
 
     public void keyManager(char key, boolean released) {
+        switch (key) {
+            case 'w':
+                controls[0] = released;
+                break;
+            case 'a':
+                controls[1] = released;
+                break;
+            case 's':
+                controls[2] = released;
+                break;
+            case 'd':
+                controls[3] = released;
+                break;
+        }
+    }
 
+    public boolean[] checkHeld() {
+        return controls;
     }
 
 
