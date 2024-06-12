@@ -28,9 +28,17 @@ public class AwakePlayer extends Player {
 
     }
     public void displayPlayer(PApplet main) {
-        main.image(WalkingAnimator.getCurrentFrame(), super.getCharPos().getX(), super.getCharPos().getY());
-        WalkingAnimator.nextFrame();
-        WalkingAnimator.updateFrame();
+
+        if(getCharPos().getxVel()  == 0 && getCharPos().getyVel() == 0) {
+            main.image(IdleAnimator.getCurrentFrame(), super.getCharPos().getX(), super.getCharPos().getY());
+            IdleAnimator.nextFrame();
+            IdleAnimator.updateFrame();
+        } else {
+            main.image(WalkingAnimator.getCurrentFrame(), super.getCharPos().getX(), super.getCharPos().getY());
+            WalkingAnimator.nextFrame();
+            WalkingAnimator.updateFrame();
+        }
+
 
 
     }
