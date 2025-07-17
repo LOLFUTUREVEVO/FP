@@ -9,5 +9,5 @@ Its just a game lol
 
 
 ## Controls
-
-Idk yet loser you need to wait bumskee kadumbskee
+WSAD - To move 
+Thats it
